@@ -1,0 +1,248 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="img/icon2.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr.SINAWAY Bio Links</title>
+
+
+
+<!--View Source is disabled!-->
+
+<script>
+        document.addEventListener('keydown', function (event) {
+            if (event.keyCode === 85 && event.ctrlKey) { // Detect Ctrl+U (view source)
+                event.preventDefault(); // Prevent default behavior
+                alert('View Source is Noop!'); // Display alert message
+            }
+        });
+
+        document.addEventListener('contextmenu', function (event) {
+            event.preventDefault(); // Prevent right-click context menu
+            alert('View Source is Noop!'); // Display alert message
+        });
+        
+        document.onkeydown = function(e)
+    {
+        if(event.keyCode == 123)
+        {
+            return false;
+        }
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0))
+        {
+            return false;
+        }
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0))
+        {
+            return false;
+        }
+        if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0))
+        {
+            return false;
+        }
+    if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0))
+    {
+      return false;
+    }
+    }
+    </script>
+
+<script type="text/javascript">
+        //<![CDATA[
+        var show_msg = '';
+        if (show_msg !== '0') {
+            var options = {view_src: "View Source is disabled!", inspect_elem: "Inspect Element is disabled!", right_click: "Right click is disabled!", copy_cut_paste_content: "Cut/Copy/Paste is disabled!", image_drop: "Image Drag-n-Drop is disabled!" }
+        } else {
+            var options = '';
+        }
+
+        function nocontextmenu(e) { return false; }
+        document.oncontextmenu = nocontextmenu;
+        document.ondragstart = function() { return false;}
+
+        document.onmousedown = function (event) {
+            event = (event || window.event);
+            if (event.keyCode === 123) {
+                if (show_msg !== '0') {show_toast('inspect_elem');}
+                return false;
+            }
+        }
+        document.onkeydown = function (event) {
+            event = (event || window.event);
+            //alert(event.keyCode);   return false;
+            if (event.keyCode === 123 ||
+                    event.ctrlKey && event.shiftKey && event.keyCode === 73 ||
+                    event.ctrlKey && event.shiftKey && event.keyCode === 75) {
+                if (show_msg !== '0') {show_toast('inspect_elem');}
+                return false;
+            }
+            if (event.ctrlKey && event.keyCode === 85) {
+                if (show_msg !== '0') {show_toast('view_src');}
+                return false;
+            }
+        }
+        function addMultiEventListener(element, eventNames, listener) {
+            var events = eventNames.split(' ');
+            for (var i = 0, iLen = events.length; i < iLen; i++) {
+                element.addEventListener(events[i], function (e) {
+                    e.preventDefault();
+                    if (show_msg !== '0') {
+                        show_toast(listener);
+                    }
+                });
+            }
+        }
+        addMultiEventListener(document, 'contextmenu', 'right_click');
+        addMultiEventListener(document, 'cut copy paste print', 'copy_cut_paste_content');
+        addMultiEventListener(document, 'drag drop', 'image_drop');
+        function show_toast(text) {
+            var x = document.getElementById("amm_drcfw_toast_msg");
+            x.innerHTML = eval('options.' + text);
+            x.className = "show";
+            setTimeout(function () {
+                x.className = x.className.replace("show", "")
+            }, 3000);
+        }
+    //]]>
+    </script>
+
+
+<!--View Source is Finsh!-->
+
+
+
+
+
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+
+    <!-- Background Animation Text -->
+    <span class="bg-text-animation">hello</span>
+
+    <!-- Profile -->
+    <img class="my-photo" src="./img/icon4.png" alt="AR Logo">
+    <h1>Dr.SINAWAY</h1>
+    <p> Professional in software development We work to develop the science of software and technology, Follow</p>
+
+    <!-- Sosial Media -->
+    <div class="sosmed">
+        <a href="https://www.tiktok.com/@lv5_v" target="_blank">
+            <i class="ph ph-tiktok-logo"></i>
+        </a>
+        <a href="https://instagram.com/dr.sinaway" target="_blank">
+            <i class="ph ph-instagram-logo"></i>
+        </a>
+        <a href="https://youtube.com/" target="_blank">
+            <i class="ph ph-youtube-logo"></i>
+        </a>
+        <a href="https://github.com/cybersorcererss" target="_blank">
+            <i class="ph ph-github-logo"></i>
+        </a>
+    </div>
+
+    <!-- Link List -->
+    <ul class="links">
+        <li> <!--discord-->
+            <a href="https://discord.com" target="_blank" class="link-card">
+                <div class="link-icon">  <!--color -->
+                    <i class="ph ph-discord-logo"></i> <!--icon-->
+                </div>
+                <p class="link-text">Join Channel Discord SOON!</p>
+                <div class="link-action">
+                    <i class="ph-fill ph-copy"></i>
+                </div>
+            </a>
+        </li>
+
+        <li> <!--github-->
+            <a href="https://github.com/cybersorcererss" target="_blank" class="link-card">
+                <div class="link-icon"> <!--color -->
+                    <i class="ph ph-github-logo"></i> <!--icon-->
+                </div>
+                <p class="link-text">My Github</p>
+                <div class="link-action">
+                    <i class="ph-fill ph-copy"></i>
+                </div>
+            </a>
+        </li>
+        <li> <!--youtube-->
+            <a href="https://youtube.com/" target="_blank" class="link-card">
+                <div class="link-icon"> <!--color -->
+                    <i class="ph ph-youtube-logo"></i> <!--icon-->
+                </div>
+                <p class="link-text">Channel Youtube SOON!</p>
+                <div class="link-action">
+                    <i class="ph-fill ph-copy"></i>
+                </div>
+            </a>
+        </li>
+
+        <li>   <!--instgram-->
+            <a href="https://instagram.com/dr.sinaway" target="_blank" class="link-card">
+                <div class="link-icon"> <!--color -->
+                    <i class="ph ph-instagram-logo"></i> <!--icon-->
+                </div>
+                <p class="link-text">My Instagram</p>
+                <div class="link-action">
+                    <i class="ph-fill ph-copy"></i>
+                </div>
+            </a>
+        </li>
+
+        <li>   <!--Telegram account-->
+            <a href="https://t.me/drsinaway" target="_blank" class="link-card">
+                <div class="link-icon"> <!--color -->
+                    <i class="ph ph-telegram-logo"></i> <!--icon-->
+                </div>
+                <p class="link-text">My Telegram</p>
+                <div class="link-action">
+                    <i class="ph-fill ph-copy"></i>
+                </div>
+            </a>
+        </li>
+
+        <li>   <!--Telegram Channel-->
+            <a href="https://t.me/CyberSorcerers" target="_blank" class="link-card">
+                <div class="link-icon"> <!--color -->
+                    <i class="ph ph-telegram-logo"></i> <!--icon-->
+                </div>
+                <p class="link-text">Telegram Channel</p>
+                <div class="link-action">
+                    <i class="ph-fill ph-copy"></i>
+                </div>
+            </a>
+        </li>
+
+    </ul>
+
+    <div class="copyright">
+        <img src="./img/icon4.png" alt="drsinaway Logo">
+        <p>Copyright Dr.SINAWAY &copy; 2024</p>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast">
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+
+</html>
+
+
+
+<!--Created By DrSINAWAY-->
+<!--Telegram @CYBERSORCERS-->
+<!--Telegram @Drsinaway-->
+<!--instgram @Dr.sinaway-->
+<!--GITHUB=GITHUB/CYBERSORCERSS-->
+<!--website=https://drsinawy.com-->
+<!--website=https://drsinaway.online-->
